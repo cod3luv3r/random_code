@@ -10,11 +10,6 @@ def ground_shipping(weight):
     return cost
 
 
-print(ground_shipping(8.4))
-
-premium_ground_shipping = 125
-
-
 def drone_shipping(weight):
     if weight <= 2:
         cost = (4.5 * weight)
@@ -35,3 +30,4 @@ def cheapest_shipping(weight):
     elif drone_shipping(weight) < (ground_shipping(weight) and premium_ground_shipping):
         print('Drone shipping is the cheapest and the cost is ' + str(drone_shipping(weight)))
 
+# inefficient way for this program to work right now. need to change some stuff
