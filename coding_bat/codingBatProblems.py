@@ -18,7 +18,6 @@ def string_splosion(str):
   result = ''
   for i in range(len(str)):
     result = result + str[:i+1]
-  
   return result
  
 def last2(str):
@@ -41,8 +40,7 @@ def array_count9(nums):
   for i in nums:
     if i == 9:
       count +=1
-  
-  return count
+    return count
   
 def array_front9(nums):
   length = len(nums)
@@ -52,15 +50,13 @@ def array_front9(nums):
   for i in range(length):
     if nums[i] == 9:
       return True
-    
-  return False
+    return False
 
 def array123(nums):
   for i in range(len(nums)-2):
     if nums[i] == 1 and nums[i+1] == 2 and nums[i+2] == 3:
       return True
-  
-  return False
+    return False
 
 #String 1
 
@@ -108,13 +104,11 @@ def left2(str):
 def first_last6(nums):
   if nums[0] == 6 or nums[-1] == 6:
     return True
-  
   return False
 
 def first_last6(nums):
   if nums[0] == 6 or nums[-1] == 6:
     return True
-  
   return False
 
 def same_first_last(nums):
@@ -124,4 +118,37 @@ def same_first_last(nums):
 
 def make_pi():
   return [3, 1, 4]
+
+def common_end(a, b):
+  if a[0] == b[0] or a[-1] == b[-1]:
+    return True
+  return False
+
+def sum3(nums):
+  return sum(nums)
+
+def rotate_left3(nums):
+  list1 = (nums[1], nums[-1],nums[0])
+  return list(list1)
+
+def reverse3(nums):
+  emptyArr = []
+  for i in range(len(nums)):
+    emptyArr.insert(0,nums[i])
+  return emptyArr
+
+def max_end3(nums):
+  maxInt = max(nums[0], nums[-1])
+  return [maxInt, maxInt, maxInt]
+  
+def sum2(nums):
+  if len(nums) == 0:
+    return 0
+  if len(nums) <= 2:
+    return sum(nums)
+  return sum(nums[:2])
+  
+def middle_way(a, b):
+  return [a[1], b[1]]
+
 
