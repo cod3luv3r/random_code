@@ -151,4 +151,107 @@ def sum2(nums):
 def middle_way(a, b):
   return [a[1], b[1]]
 
+def make_ends(nums):
+  return [nums[0], nums[-1]]
+
+def has23(nums):
+  if 2 in nums or 3 in nums:
+    return True
+  return False
+
+def cigar_party(cigars, is_weekend):
+  if is_weekend == True:
+    return cigars >= 40
+  return 40 <= cigars <= 60
+
+#Logic 2
+
+def lone_sum(a, b, c):
+  if a == b == c:
+    return 0
+  if a == b:
+    return c
+  if a == c:
+    return b
+  if b == c:
+    return a
+  return (a+b+c)
+
+def lucky_sum(a, b, c):
+  if a == 13:
+    return 0
+  if b == 13:
+    return a
+  if c == 13:
+    return a + b
+  return a + b + c
+
+#String 2
+
+def double_char(str):
+  empty = ''
+  for i in str:
+    empty = empty + i * 2 
+  return empty
+
+def count_hi(str):
+  count = 0
+  for i in range(len(str)-1):
+    if str[i] == 'h' and str[i+1] == 'i':
+      count +=1
+  return count
+
+def cat_dog(str):
+  catCount = 0
+  dogCount = 0
+  for i in range(len(str)-2):
+    if str[i] == 'c' and str[i+1] == 'a' and str[i+2] == 't':
+      catCount +=1
+  for i in range(len(str)-2):
+    if str[i] == 'd' and str[i+1] == 'o' and str[i+2] == 'g':
+      dogCount +=1
+    return catCount == dogCount
+
+def count_code(str):
+  count = 0
+  for i in range(len(str)-3):
+    if str[i] == 'c' and str[i+1] == 'o' and str[i+3] == 'e':
+      count +=1
+  return count
+
+def end_other(a, b):
+  a = a.lower()
+  b = b.lower()
+  sStr = min(len(a), len(b))
+  ssStr = min(a, b)
+  bStr = max(a, b)
+  if bStr[-(sStr):] ==  ssStr:
+    return True
+  return False
+
+#List 2
+
+def count_evens(nums):
+  return len([x for x in nums if x % 2 == 0])
+
+def big_diff(nums):
+  return max(nums) - min(nums)
+
+def centered_average(nums):
+  nums = nums.sort()
+  nums = nums[1:-1]
+  return sum(nums) // len(nums)
+
+def sum13(nums):
+  sum = 0
+  if len(nums) == 0:
+    return 0
+  for i in nums:
+    if i == 13:
+      return sum
+    sum +=i
+  return sum
+
+
+
 
