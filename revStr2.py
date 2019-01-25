@@ -10,3 +10,6 @@ def revStr(s):
       emptyStr = s[i] + emptyStr
 
   return emptyStr
+
+def revStr1(s):
+  return s[::-1]
